@@ -1,0 +1,117 @@
+/* ตั้งค่าพื้นฐาน */
+body {
+    margin: 0;
+    font-family: 'K2D', sans-serif, Arial, sans-serif;
+    background-color: #f4f6f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* 1. แถบ Navbar ด้านบน (คงแสดงผลเมื่อเลื่อนหน้าลงด้านล่าง - Sticky) */
+nav {
+    position: sticky;
+    top: 0;
+    background-color: #223D7E; /* ธีมสีน้ำเงินเข้ม */
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 30px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    z-index: 1000;
+}
+
+/* โลโก้และชื่อเว็บไซต์ทางซ้ายมือ */
+.nav-brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.nav-brand img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* 3 ปุ่มข้อความเมนวย่อยทางขวาสุด */
+.nav-menu {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    transition: color 0.3s;
+}
+
+.nav-menu a:hover {
+    color: #F36C21; /* สีส้มไฮไลต์เมื่อเอาเมาส์ชี้ */
+}
+
+/* โครงสร้างเนื้อหาหลัก */
+.container {
+    max-width: 800px;
+    margin: 30px auto;
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+/* หัวข้อเรื่อง */
+h1 {
+    color: #223D7E;
+    margin-top: 0;
+    font-style: italic;
+    font-weight: bold;
+}
+
+/* ภาพปก พร้อมข้อความเล็กๆ บนขวาล่างของภาพ */
+.cover-wrapper {
+    position: relative;
+    margin: 20px 0;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.cover-wrapper img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.cover-caption {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    background: rgba(0, 0, 0, 0.65);
+    color: white;
+    padding: 6px 12px;
+    font-size: 13px;
+    border-radius: 4px;
+    letter-spacing: 0.5px;
+}
+
+/* เนื้อหายาวๆ เพื่อให้ทดสอบการเลื่อนหน้า (Scrollable) */
+section {
+    margin-bottom: 30px;
+}
+
+h2 {
+    color: #F36C21;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 8px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    color: #777;
+    font-size: 14px;
+}
