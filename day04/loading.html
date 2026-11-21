@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loading Progress Bar</title>
+    <style>
+        body {
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 35px;
+            background-color: #f4f6f9;
+            font-family: Arial, sans-serif;
+        }
+
+        .box {
+            width: 500px;
+            max-width: 90%;
+        }
+
+        .label {
+            font-size: 14px;
+            margin-bottom: 10px;
+            color: #333;
+            font-weight: bold;
+        }
+
+        .progress-track {
+            width: 100%;
+            height: 22px;
+            background-color: #d8c7d8;
+            border-radius: 999px;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            height: 100%;
+            width: 0%;
+            background-color: #26044c;
+            border-radius: 999px;
+            animation-name: fillBar;
+            animation-duration: 4s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes fillBar {
+            0% {
+                width: 0%;
+            }
+            100% {
+                width: 100%;
+            }
+        }
+
+        .gradient-track {
+            width: 100%;
+            height: 22px;
+            border-radius: 999px;
+            background: linear-gradient(90deg, #8ea4f8 0%, #09156f 70%, #8ea4f8 100%);
+            background-size: 200% 100%;
+            animation-name: slideGradient;
+            animation-duration: 2s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes slideGradient {
+            0% {
+                background-position: 100% 0;
+            }
+            100% {
+                background-position: -100% 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="box">
+        <div class="label">Loading Progress</div>
+        <div class="progress-track">
+            <div class="progress-fill"></div>
+        </div>
+    </div>
+
+    <div class="box">
+        <div class="label">Sliding Gradient</div>
+        <div class="gradient-track"></div>
+    </div>
+
+</body>
+</html>
